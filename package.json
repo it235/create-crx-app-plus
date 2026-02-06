@@ -1,0 +1,20 @@
+{
+  "name": "create-crx-app-plus",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "templates/*"
+  ],
+  "scripts": {
+    "build": "yarn workspace create-crx-app-plus build",
+    "run-react-ts": "yarn workspace react-ts-mv3 dev",
+    "run-react-js": "yarn workspace react-js-mv3 dev",
+    "run-vue-ts": "yarn workspace vue-ts-mv3 serve",
+    "run-vue-js": "yarn workspace vue-js-mv3 serve",
+    "prepublish": "yarn run build",
+    "publish": "cd packages/create-crx-app-plus && npm publish"
+  },
+  "repository": "https://github.com/it235/create-crx-app-plus.git",
+  "license": "MIT"
+}
