@@ -1,8 +1,8 @@
 {
   "name": "create-crx-app-plus",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "scripts": {
-    "prebuild": "if exist dist rmdir /s /q dist",
+    "prebuild": "rm -rf dist || true",
     "build": "tsc"
   },
   "keywords": [
@@ -17,7 +17,8 @@
     "create-crx-app-plus": "./dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "dist/**/*"
   ],
   "author": "nobug@mail.com",
   "description": "Create Chrome Extension V3 apps or Microsoft Edge Extension V3 apps with one command",
@@ -40,7 +41,6 @@
     "@types/node": "^16.7.2",
     "@types/prompts": "^2.0.14",
     "@types/semver": "^7.3.8",
-    "@types/tar": "^4.0.5",
     "@types/validate-npm-package-name": "^3.0.3",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
@@ -51,13 +51,14 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "@types/tar": "^6.1.13",
     "chalk": "^4.1.1",
     "commander": "^8.1.0",
     "cross-spawn": "^7.0.3",
     "got": "^11.8.2",
     "prompts": "^2.4.1",
     "semver": "^7.3.5",
-    "tar": "^6.1.11",
+    "tar": "^7.5.7",
     "validate-npm-package-name": "^3.0.0"
   }
 }
