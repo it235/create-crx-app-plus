@@ -1,28 +1,27 @@
-> Special thanks: This project is based on https://github.com/Jcanno/create-crx-app. I'm grateful to the original creator, but that plugin is in version 2, and neither Chrome nor Edge provides support for it anymore. Therefore, this upgrade is based on cursor, while the icon remains from the original project. So, I am standing on the shoulders of giants.
+> 特别鸣谢：本项目前身 [create-crx-app](https://github.com/Jcanno/create-crx-app) ，感谢该大佬，但该插件是v2版本，chrome和edge都不再提供支持，所以本次基于cursor做了升级，icon各方都保留原项目，所以我是站在巨人的肩膀上前进。
 
 
-<h1 align="center"><img height="300" src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/create-crx-app-plus.png" /><br> </h1>
+<h1 align="center">1分钟快速构建你的浏览器插件<br> </h1>
 
-<h3 align="center">CLI for create Chrome extension V3 app</h3>
+简体中文|[English](https://github.com/it235/create-crx-app-plus/blob/main/README.zh-CN.md)
 
-English|[简体中文](https://github.com/it235/create-crx-app-plus/blob/main/README.zh-CN.md)
-
-we recommend to type code below in terminal with npm 5.2+ and higher:
+如果你的 npm 版本大于 5.2，推荐在终端这样使用 create-crx-app-plus：
 
 ```js
 npx create-crx-app-plus my-crx-app
 cd my-crx-app
-npm run dev
+npm run dev  or yarn dev
 ```
 
-We can easily generate a Chrome extension project by using create-crx-app-plus step by step.
+通过 create-crx-app-plus， 我们可以一步步生成Chrome插件项目(**适用于Edge**)
 
-Select your project framework:
+选择你的项目框架:
 
-```bash
-$ npx create-crx-app-plus transplugin
+```shell
+$ npx create-crx-app-plus@latest transplugin
+
 Need to install the following packages:
-  create-crx-app-plus@0.2.2
+  create-crx-app-plus@0.2.5
 Ok to proceed? (y) y
 ? Select your project framework » - Use arrow-keys. Return to submit.
 >   React
@@ -30,12 +29,13 @@ Ok to proceed? (y) y
 
 ```
 
-Select your project language:
+选择你的项目语言:
 
-```bash
-$ npx create-crx-app-plus transplugin
+```shell
+$ npx create-crx-app-plus@latest transplugin
+
 Need to install the following packages:
-  create-crx-app-plus@0.2.2
+  create-crx-app-plus@0.2.5
 Ok to proceed? (y) y
 √ Select your project framework » Vue
 ? Select your project language » - Use arrow-keys. Return to submit.
@@ -44,27 +44,33 @@ Ok to proceed? (y) y
 
 ```
 
-After that, create-crx-app-plus will generate project by your setting.
+create-crx-app-plus 将会按照你的所有配置生成项目
 
-## Start Extension
+## 启动插件
 
-1. run `yarn run dev(React)` or `yarn run serve(Vue)` for developing Chrome Extension.
-2. input and open `chrome://extensions/` in your Chrome search bar.
-3. open `developer mode` in the top right corner in Extensions Page.
-4. click `load unpacked extension project`, select the `dist` folder.
+1. 运行 `yarn run dev(React)` 或者 `yarn run serve(Vue)` 来开发 Chrome 插件.
+2. 在 Chrome 浏览器打开`chrome://extensions/` 扩展管理面板.
+3. 在扩展管理面板右上角开启`开发者模式`.
+4. 点击`加载已解压的扩展程序`，选择项目打包好的`dist`文件夹
 
-## Sample
+## 插件样品
 
-Sample Extension will generate a purple button which can be moved in the bottom right corner in every page.
+点击插件图标可以看到插件弹出页，在这里可以跳转到插件配置页.配置页意味着你在这里可以做任何事.
 
-<img src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/content.png" />
 
-Click the extension icon and get the popup page, you can turn to options page here
+[plugin](./popup.png)
 
-<img src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/popup.png" />
+插件实例将会在每个页面的右下角生成一个可拖拽移动的紫色按钮.
 
-Options page shows you can do everything here.
+访问www.baidu.com，你将可以看到右下角悬浮的弹出框，接下来你可以使用AI IDE来尽情修改这个项目.
 
-<img src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/options.png" />
+## 二次开发
 
-That's all Sample Extension do.
+如果你要修改本项目，clone下来后
+
+```js
+cd packages\create-crx-app-plus
+npm install -g typescript
+npm install
+npm run build
+```
