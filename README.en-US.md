@@ -58,7 +58,7 @@ Sample Extension will generate a purple button which can be moved in the bottom 
 
 Click the extension icon and get the popup page, you can turn to options page here
 
-[plugin](./popup.png)
+![plugin](./popup.png)
 
 Options page shows you can do everything here.
 
