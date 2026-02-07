@@ -1,8 +1,9 @@
 {
   "name": "create-crx-app-plus",
-  "version": "0.1.6",
+  "version": "0.2.5",
   "scripts": {
-    "prebuild": "rm -rf dist || true",
+    "prebuild": "node -e \"const fs=require('fs');const path=require('path');const distPath=path.join(__dirname,'dist');if(fs.existsSync(distPath)){fs.rmSync(distPath,{recursive:true,force:true});}\"",
+    "prepublishOnly": "npm run build",
     "build": "tsc"
   },
   "keywords": [
@@ -17,8 +18,9 @@
     "create-crx-app-plus": "./dist/index.js"
   },
   "files": [
-    "dist",
-    "dist/**/*"
+    "dist/index.js",
+    "dist/package.json",
+    "dist/src"
   ],
   "author": "nobug@mail.com",
   "description": "Create Chrome Extension V3 apps or Microsoft Edge Extension V3 apps with one command",

@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES2015",
     "lib": ["ES2015", "DOM"],
     "outDir": "./dist",
+    "rootDir": ".",
     "moduleResolution": "Node",
+    "module": "CommonJS",
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": false
+    "skipLibCheck": true
   },
-  "include": ["./src/*", "index.ts"],
-  "exclude": ["templates", "dist"]
+  "include": ["./src/**/*", "index.ts"],
+  "exclude": ["templates", "dist", "node_modules"]
 }

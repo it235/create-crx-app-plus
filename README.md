@@ -19,11 +19,30 @@ We can easily generate a Chrome extension project by using create-crx-app-plus s
 
 Select your project framework:
 
-<img height="150" width="400" src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/framework.png" />
+```bash
+$ npx create-crx-app-plus transplugin
+Need to install the following packages:
+  create-crx-app-plus@0.2.2
+Ok to proceed? (y) y
+? Select your project framework » - Use arrow-keys. Return to submit.
+>   React
+    Vue
+
+```
 
 Select your project language:
 
-<img height="150" width="400" src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/lang.png" />
+```bash
+$ npx create-crx-app-plus transplugin
+Need to install the following packages:
+  create-crx-app-plus@0.2.2
+Ok to proceed? (y) y
+√ Select your project framework » Vue
+? Select your project language » - Use arrow-keys. Return to submit.
+>   TypeScript
+    JavaScript
+
+```
 
 After that, create-crx-app-plus will generate project by your setting.
 

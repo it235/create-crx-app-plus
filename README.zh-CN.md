@@ -19,11 +19,30 @@ npm run dev  or yarn dev
 
 选择你的项目框架:
 
-<img height="150" width="400" src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/framework.png" />
+```bash
+$ npx create-crx-app-plus transplugin
+Need to install the following packages:
+  create-crx-app-plus@0.2.2
+Ok to proceed? (y) y
+? Select your project framework » - Use arrow-keys. Return to submit.
+>   React
+    Vue
+
+```
 
 选择你的项目语言:
 
-<img height="150" width="400" src="https://raw.githubusercontent.com/it235/images/master/create-crx-app-plus/lang.png" />
+```bash
+$ npx create-crx-app-plus transplugin
+Need to install the following packages:
+  create-crx-app-plus@0.2.2
+Ok to proceed? (y) y
+√ Select your project framework » Vue
+? Select your project language » - Use arrow-keys. Return to submit.
+>   TypeScript
+    JavaScript
+
+```
 
 create-crx-app-plus 将会按照你的所有配置生成项目
 
@@ -50,3 +69,10 @@ create-crx-app-plus 将会按照你的所有配置生成项目
 
 这就是样品插件所提供的功能.
 
+如果你要修改本项目，clone下来后
+```js
+cd packages\create-crx-app-plus
+npm install -g typescript
+npm install
+npm run build
+```
